@@ -1,0 +1,63 @@
+{% extends 'excaliburclient/base.html' %}
+{% load static %}
+{% block content %}
+<!-- main-login-area-start -->
+<div class="main-login-area login-res-v3 logres-bg-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+	<div class="main-content">
+	  <h3>Welcome! <br>
+	    Please Create your account</h3>
+	  <p class="email-linking">
+	    <a href="#">Or Register with email</a>
+	  </p>
+	  <form action="/signup/" method="post" class="customer-input">
+	    {% csrf_token %}
+	    <div class="row">
+	      <div class="col-lg-6 col-md-6">
+		<input name="first_name" type="text" placeholder="Fist Name">
+	      </div>
+	      <div class="col-lg-6 col-md-6">
+		<input name="username" type="text" placeholder="Username">
+	      </div>
+	      <div class="col-lg-6 col-md-6">
+		<input name="email" type="email" placeholder="Email address">
+	      </div>
+	      <div class="col-lg-6 col-md-6">
+		<input name="password" type="password" placeholder="Choose password">
+	      </div>
+	    </div>
+	    <div class="forgot-pass">
+	    <div class="check-remamber-field">
+	      <div class="round">
+		<input type="checkbox" id="checkbox" />
+		<label for="checkbox"></label>
+	      </div>
+	      <span class="remember-me resitration-privacy">
+		By signing up, you agree to <a href="#">Terms of Service</a> and <a href="#">Privacy
+		  Policy</a>
+	      </span>
+	    </div>
+	  </div>
+	  <button type="submit" class="login-res-btn">Register</button>
+	  <div class="create-account">
+	    <p>Already a member yet? <a href="/login/">Login account</a> here.</p>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="login-anim-wrap">
+    <div class="login-anim-1 custom-animation11"><img src="/img/login-icon/05.png" alt=""></div>
+    <div class="login-anim-2 custom-animation"><img src="/img/login-icon/3.png" alt=""></div>
+    <div class="login-anim-3 custom-animation11"><img src="/img/login-icon/04.png" alt=""></div>
+    <div class="login-anim-9 custom-animation10"><img src="/img/login-icon/06.png" alt=""></div>
+    <div class="login-anim-7 custom-animation"><img src="/img/login-icon/07.png" alt=""></div>
+    <div class="login-anim-8 custom-animation10"><img src="/img/login-icon/1.png" alt=""></div>
+    <div class="login-anim-10 custom-animation11"><img src="/img/login-icon/02.png" alt=""></div>
+  </div>
+</div>
+<!-- main-login-area-end -->
+{% endblock content %}

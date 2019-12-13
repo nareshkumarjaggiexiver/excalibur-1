@@ -26,7 +26,7 @@
       <div class="offcanvace-area">
 	<div class="logo-area login-res-v3">
 	  <a href="/">
-	    <img src="/img/logo/logo.png" alt="excalibur">
+	    <img src="/img/logo/logo.png" style="width:10%" alt="excalibur">
 	  </a>
 	</div>
 	<div class="container">
@@ -67,70 +67,8 @@
       </div>
     </div>
     <!-- offcanvas-main-menu end -->
-    <!-- main-login-area-start -->
-    <div class="main-login-area login-res-v3 logres-bg-1">
-      <div class="container">
-	<div class="row">
-	  <div class="col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
-	    <div class="main-content">
-	      <h3>Welcome! <br>
-		Please Create your account</h3>
-	      <!-- <div class="media-link"> -->
-	      <!-- 	<a href="#"> <i class="ti-facebook"></i> Login with facebook</a> -->
-	      <!-- 	<a class="twitter-bg" href="#"> <i class="ti-twitter-alt"></i> Login with Twitter</a> -->
-	      <!-- </div> -->
-	      <p class="email-linking">
-		<a href="#">Or Register with email</a>
-	      </p>
-
-	      <form action="#" class="customer-input">
-		<div class="row">
-		  <div class="col-lg-6 col-md-6">
-		    <input type="text" placeholder="Your Name">
-		  </div>
-		  <div class="col-lg-6 col-md-6">
-		    <input type="text" placeholder="Username">
-		  </div>
-		  <div class="col-lg-6 col-md-6">
-		    <input type="email" placeholder="Email address">
-		  </div>
-		  <div class="col-lg-6 col-md-6">
-		    <input type="password" placeholder="Choose password">
-		  </div>
-		</div>
-	      </form>
-	      <div class="forgot-pass">
-		<div class="check-remamber-field">
-		  <div class="round">
-		    <input type="checkbox" id="checkbox" />
-		    <label for="checkbox"></label>
-		  </div>
-		  <span class="remember-me resitration-privacy">
-		    By signing up, you agree to <a href="#">Terms of Service</a> and <a href="#">Privacy
-		      Policy</a>
-		  </span>
-		</div>
-	      </div>
-	      <button type="submit" class="login-res-btn">Register</button>
-	      <div class="create-account">
-		<p>Already a member yet? <a href="login-v3.html">Login account</a> here.</p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-      </div>
-      <div class="login-anim-wrap">
-	<div class="login-anim-1 custom-animation11"><img src="/img/login-icon/05.png" alt=""></div>
-	<div class="login-anim-2 custom-animation"><img src="/img/login-icon/3.png" alt=""></div>
-	<div class="login-anim-3 custom-animation11"><img src="/img/login-icon/04.png" alt=""></div>
-	<div class="login-anim-9 custom-animation10"><img src="/img/login-icon/06.png" alt=""></div>
-	<div class="login-anim-7 custom-animation"><img src="/img/login-icon/07.png" alt=""></div>
-	<div class="login-anim-8 custom-animation10"><img src="/img/login-icon/1.png" alt=""></div>
-	<div class="login-anim-10 custom-animation11"><img src="/img/login-icon/02.png" alt=""></div>
-      </div>
-    </div>
-    <!-- main-login-area-end -->
-
+    {% block content %}
+    {% endblock content %}
     <!-- Optional JavaScript -->
     <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>

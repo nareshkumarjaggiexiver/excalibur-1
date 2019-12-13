@@ -1,0 +1,50 @@
+{% extends 'excaliburclient/base.html'%}
+{% load static %}
+{% block content %}
+<!-- main-login-area-start -->
+<div class="main-login-area login-res-v3 logres-bg-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-12 col-xl-6 offset-xl-3">
+	<div class="main-content">
+	  <h3>Welcome back, Please login <br>
+	    to your account </h3>
+	  <p class="email-linking">
+	    <a href="#">Or login with email</a>
+	  </p>
+	  <form action="/login/" method="post" class="customer-input">
+	    {% csrf_token %}
+	    <input type="text" name="username" placeholder="Enter username" required>
+	    <input type="password" name="password" placeholder="Password" required>
+	    <div class="forgot-pass">
+	    <div class="check-remamber-field">
+	      <div class="round">
+		<input  type="checkbox" id="checkbox" />
+		<label for="checkbox"></label>
+	      </div>
+	      <span class="remember-me">
+		Remember me
+	      </span>
+	    </div>
+	    <span><a href="#">Forgot Password</a></span>
+	  </div>
+	  <button type="submit" class="login-res-btn">Login</button>
+	  <div class="create-account">
+	    <p>Not a member yet? <a href="/signup/">Create account</a> here.</p>
+	  </div>
+	  </form>
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="login-anim-wrap">
+    <div class="login-anim-1 custom-animation11"><img src="/img/login-icon/05.png" alt=""></div>
+    <div class="login-anim-2 custom-animation"><img src="/img/login-icon/3.png" alt=""></div>
+    <div class="login-anim-3 custom-animation11"><img src="/img/login-icon/04.png" alt=""></div>
+    <div class="login-anim-9 custom-animation10"><img src="/img/login-icon/06.png" alt=""></div>
+    <div class="login-anim-7 custom-animation"><img src="/img/login-icon/07.png" alt=""></div>
+    <div class="login-anim-8 custom-animation10"><img src="/img/login-icon/1.png" alt=""></div>
+    <div class="login-anim-10 custom-animation11"><img src="/img/login-icon/02.png" alt=""></div>
+  </div>
+</div>
+{% endblock content %}

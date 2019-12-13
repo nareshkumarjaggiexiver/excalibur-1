@@ -8,5 +8,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('excaliburclient.urls')),
+    path('', include(('excaliburclient.urls', 'excaliburclient'), namespace='excaliburclient'), name='excaliburclient'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

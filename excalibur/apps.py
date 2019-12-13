@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+from django.app import AppConfig
 
 
-class ExcaliburConfig(AppConfig):
+class Excalibur(AppConfig):
     name = 'excalibur'

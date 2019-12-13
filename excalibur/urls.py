@@ -1,10 +1,12 @@
-from django.urls import path
-from excalibur import views
+# -*- coding: utf-8 -*-
+
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.Home.as_view(), name='home'),
-    path('job', views.Job.as_view(), name='job'),
-    path('jobs', views.Jobs.as_view(), name='jobs'),
-    path('workspace', views.Workspace.as_view(), name='workspace'),
-]
+    path('admin/', admin.site.urls),
+    path('', include('excaliburclient.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

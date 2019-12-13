@@ -14,13 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from excalibur_port import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Home.as_view(), name='home'),
-    path('job', views.Job.as_view(), name='job'),
-    path('jobs', views.Jobs.as_view(), name='jobs'),
-    path('workspace', views.Workspace.as_view(), name='workspace'),
+    path('', include('excalibur.urls')),
 ]

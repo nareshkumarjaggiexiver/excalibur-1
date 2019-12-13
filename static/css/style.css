@@ -16200,7 +16200,7 @@ footer.home-6-footer .footer-bottom .links-6 li a:hover {
 .login-resistration-area .main-login-area::before {
   position: absolute;
   content: "";
-  background-image: url(../img/login-resister-image/login-1.png);
+  background-image: url(/img/login-resister-image/login-1.png);
   height: 100%;
   width: 44%;
   bottom: 0;
@@ -16481,7 +16481,7 @@ footer.home-6-footer .footer-bottom .links-6 li a:hover {
 
 /* line 422, ../../Arafath/v6/262 Anne v3 - Copy/anne-html/anne/scss/_login-resis.scss */
 .logres-bg-1 {
-  background-image: url(../img/login-resister-image/login-3.jpg);
+  background-image: url(/img/login-resister-image/login-3.jpg);
 }
 
 /* line 428, ../../Arafath/v6/262 Anne v3 - Copy/anne-html/anne/scss/_login-resis.scss */

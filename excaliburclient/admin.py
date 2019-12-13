@@ -1,5 +1,5 @@
 from django.contrib import admin
-from excalibur.models import File
+from excaliburclient.models import File
 
 
 admin.site.register(File)

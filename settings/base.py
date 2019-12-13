@@ -25,7 +25,7 @@ SECRET_KEY = '@&6aqg9$=cnk)w3qu2$*s-lz51t5t*57)r=lal1ja#cctjxang'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', '20.0.0.20',]
+ALLOWED_HOSTS = ['localhost','127.0.0.1', '20.0.0.20', 'demo.exiverprojects.com']
 
 
 # Application definition

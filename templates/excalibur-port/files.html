@@ -15,7 +15,8 @@
     </div>
   </div>
 
-  <form class="mb-5" method="post" action="">
+  <form class="mb-5" method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="row align-items-center">
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="input-group">
@@ -30,7 +31,7 @@
         <div class="input-group">
           <input type="text" class="form-control" id="pages" placeholder="Comma-separated page numbers to extract tables from.">
           <div class="input-group-append">
-            <button type="button" id="upload" class="btn btn-outline-secondary">Upload</button>
+            <button type="submit" id="upload" class="btn btn-outline-secondary">Upload</button>
           </div>
         </div>
       </div>
@@ -56,7 +57,7 @@
                     {% if files_response|length > 0 %}
                       {% for file in files_response %}
                         <tr>
-                          <th width="10%" scope="row">{{ loop.index }}</th>
+                          <th width="10%" scope="row">{{ forloop.counter }}</th>
                           <td width="40%">{{ file.filename }}</td>
                           <td width="20%">{{ file.uploaded_at }}</td>
                           <td width="15%"><a href="/workspaces/{{ file.file_id }}" class="btn btn-sm btn-outline-success" role="button">Extract Again</a></td>
@@ -82,5 +83,5 @@
 {% endblock %}
 
 {% block javascript %}
-    <script type="text/javascript" src="{% static 'js/files.js' %}"></script>
+<!--<script type="text/javascript" src="{% static 'js/files.js' %}"></script>-->
 {% endblock %}

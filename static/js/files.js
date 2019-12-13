@@ -24,7 +24,7 @@ $(document).ready(function () {
     var pages = $('#pages').val() ? $('#pages').val() : 1;
     data.append('pages', pages);
     $.ajax({
-      url: '/files',
+      url: '',
       type: 'POST',
       cache: false,
       contentType: false,

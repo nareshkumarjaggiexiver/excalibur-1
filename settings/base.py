@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'excalibur_port',
+    'excalibur',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

@@ -8,6 +8,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from excaliburclient.metadata import generate_uuid, random_string
 from excaliburclient.models import File
+from django.contrib import messages
 
 
 class LoginView(View):
@@ -48,18 +49,24 @@ class SignUpView(View):
             return redirect('excaliburclient:home')
         else:
             return render(request, self.template_name)
-        
 
     def post(self, request, *args, **kwargs):
         first_name = request.POST.get('first_name')
         username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
-        user = User.objects.create(first_name=first_name, email=email, username=username)
+
+        try:
+            user = User.objects.create(first_name=first_name, email=email, username=username)
+        except Exception as e:
+            messages.error(request, 'Username or Email is already taken', extra_tags='alter-danger')
+            return redirect('excaliburclient:signup')
+
         user.set_password(password)
         user.save()
         # authenticating the user
         user = authenticate(username=user.username, password=password)
+
         if user is not None:
             login(request, user)
             return redirect('excaliburclient:home')
